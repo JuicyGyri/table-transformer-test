@@ -41,9 +41,9 @@ Table Transformer is an advanced open-source tool that leverages state-of-the-ar
 ## **Installation**
 
 ### **Prerequisites**
-- Python 3.8+
-- Conda
-- [Git](https://git-scm.com/downloads) (to clone the repository)
+- [Python 3.8+](https://www.python.org/downloads/)
+- [Conda](https://docs.conda.io/en/latest/miniconda.html) (Miniconda recommended)
+- [Git](https://git-scm.com/downloads)
 
 ### **Setup**
 
@@ -109,6 +109,90 @@ Run the Streamlit app to interact with the tool:
 ```bash
 streamlit run src/streamlit_app.py
 ```
+
+---
+
+## **Using This Tool in VS Code — Step by Step**
+
+Follow these steps to set up and run the tool directly inside Visual Studio Code.
+
+### **Step 1 — Install the Python Extension**
+
+1. Open VS Code.
+2. Click the **Extensions** icon in the left sidebar (or press `Ctrl+Shift+X` / `Cmd+Shift+X` on Mac).
+3. Search for **Python** (published by Microsoft) and click **Install**.
+
+> This extension enables Python IntelliSense, debugging, and interpreter selection inside VS Code.
+
+---
+
+### **Step 2 — Open the Project Folder**
+
+1. In VS Code, go to **File → Open Folder…** (or press `Ctrl+K Ctrl+O` / `Cmd+K Cmd+O` on Mac).
+2. Navigate to the `table-transformer-test` folder you cloned in the installation step and click **Select Folder**.
+
+You should now see the project files in the VS Code Explorer panel on the left.
+
+---
+
+### **Step 3 — Select the Conda Python Interpreter**
+
+1. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac) to open the Command Palette.
+2. Type **Python: Select Interpreter** and press `Enter`.
+3. Choose the interpreter that corresponds to your `myenv` conda environment — it will look something like:
+   ```
+   Python 3.12.7 ('myenv': conda)
+   ```
+
+> If `myenv` does not appear, make sure you created it with `conda create --name myenv python=3.12.7` and that Conda is on your system PATH.
+
+---
+
+### **Step 4 — Open the Integrated Terminal**
+
+1. In VS Code, go to **Terminal → New Terminal** (or press `` Ctrl+` ``).
+2. A terminal panel will open at the bottom of the editor.
+3. Activate your conda environment:
+   ```bash
+   conda activate myenv
+   ```
+
+---
+
+### **Step 5 — Run the Streamlit App**
+
+In the integrated terminal, run:
+
+```bash
+streamlit run src/streamlit_app.py
+```
+
+VS Code's terminal will display output similar to:
+
+```
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.x.x:8501
+```
+
+VS Code may also prompt you to **Open in Browser** — click it to open the app directly.
+
+---
+
+### **Step 6 — Use the App**
+
+Once the app opens in your browser:
+
+| Step | Action |
+|------|--------|
+| 1 | Click **Browse files** (or drag-and-drop) to upload a PNG, JPG, or JPEG image that contains a table. |
+| 2 | Wait for the tool to detect and highlight the table with a green bounding box. |
+| 3 | Switch between the **Raw Data** and **Enhanced Data ⭐** tabs to inspect the extracted table. |
+| 4 | Copy the generated **HTML table** snippet from the code block shown under each tab. |
+| 5 | Click **Download Raw Data** or **Download Enhanced Data ⭐** to save the results as a CSV file. |
+
+To stop the app, go back to the VS Code terminal and press `Ctrl+C`.
 
 ### **Contributions**
 Contributions are welcome! Please fork the repository and submit a pull request with your improvements or new features.
