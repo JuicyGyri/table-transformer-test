@@ -43,16 +43,17 @@ Table Transformer is an advanced open-source tool that leverages state-of-the-ar
 ### **Prerequisites**
 - Python 3.8+
 - Conda
+- [Git](https://git-scm.com/downloads) (to clone the repository)
 
 ### **Setup**
 
 1. **Clone the Repository**
 
-   Clone the repository to your local machine:
+   Clone **this** repository to your local machine:
 
    ```bash
-   git clone https://github.com/Sudhanshu1304/table-transformer.git
-   cd table-transformer
+   git clone https://github.com/JuicyGyri/table-transformer-test.git
+   cd table-transformer-test
    ```
 
 2. **Create and Activate Conda Environment**
@@ -64,29 +65,27 @@ Table Transformer is an advanced open-source tool that leverages state-of-the-ar
    conda activate myenv
    ```
 
-3. **Install PaddlePaddle**
+3. **Install Dependencies**
 
-   Install PaddlePaddle in the conda environment:
+   **Option A – Install from `requirements.txt` (recommended):**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   **Option B – Install packages individually:**
+
+   Install PaddlePaddle:
 
    ```bash
    python -m pip install paddlepaddle==3.0.0rc1 -i https://www.paddlepaddle.org.cn/packages/stable/cpu/
    ```
 
-4. **Install PaddleOCR**
-
-   Install PaddleOCR:
+   Install PaddleOCR and remaining packages:
 
    ```bash
    pip install paddleocr
-   ```
-
-5. **Install Additional Dependencies**
-
-   Install other required packages:
-
-   ```bash
-   pip install ultralytics pandas
-   pip install streamlit
+   pip install ultralytics pandas streamlit
    ```
 
 ### **Project Structure**
